@@ -2,11 +2,11 @@
 
 namespace VinfoChatConsole
 {
-    public abstract class User 
+    public abstract class User
     {
         protected IMediator Mediator;
         protected string userName = string.Empty;
-        //protected List<string> usersNameFollow = new List<string>();
+        protected List<User> usersNameFollow = new List<User>();
         protected List<Post> posts = new List<Post>();
 
         public User(IMediator mediator, string userName)
@@ -21,18 +21,11 @@ namespace VinfoChatConsole
 
         public abstract void Follow(User userName);
 
-        public string UserName() => userName;  
+        public string UserName() => userName;
 
-        //public List<string> UsersNameFollow() => usersNameFollow;
+        public List<User> UsersNameFollow() => usersNameFollow;
 
         public List<Post> Posts() => posts;
-
-
-        //{
-        //   
-        //}
-
-
 
     }
 }

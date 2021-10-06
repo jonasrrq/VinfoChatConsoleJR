@@ -24,14 +24,12 @@ namespace VinfoChatConsole
             Console.WriteLine("VinfoChatConsole => Exit para Salir");
             bool exit;
             List<string> commandValidator = new List<string> { "post", "follow", "dashboard", "wall" };
-            // string expresionUserText = @"\@(.* )";
-            // Regex r = new Regex(expresionUserText, RegexOptions.IgnoreCase);
+
             do
             {
                 Console.ForegroundColor = ConsoleColor.Green;
                 Console.Write("> ");
                 string result = Console.ReadLine();
-                // Match x = r.Match(result);
 
                 exit = result.ToUpperInvariant() == "EXIT";
 
@@ -76,7 +74,7 @@ namespace VinfoChatConsole
                         {
                             user.Follow(userFollows);
                         }
-                       
+
                     }
                     else if (comanmd.ToLower() == "post")
                     {

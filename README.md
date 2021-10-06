@@ -1,0 +1,2 @@
+# VinfoChatConsoleJR
+Prueba técnica
